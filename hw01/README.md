@@ -1,4 +1,10 @@
-# hw1
+# HW1
+
+  - Spent around 2-3 hours to set up the environment
+  - Spent around 1-2 hours to understand the background knowledge of how to toggle the GPIO output PIN	
+  - Spent around 1-2 hours to understand the instruction set and decode the machine code
+
+# Machine Code from dump.txt
 
   48:	b580      	--> push	{r7, lr}
 

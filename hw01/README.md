@@ -18,58 +18,50 @@
 
 ## Machine Code from objdump_O0.txt
 
-**48:	b580**	push	{r7, lr}
+**238:	b580**	push	{r3, lr}
 
-	0xb580 = 1011 | 0101 | 1000 0000
-		 	 PUSH   L  R   Push Link Register and Register(r7) onto the stack
+	0xb508 = 1011 | 0101 | 0000 1000
+		 	 PUSH   L  R   Push Link Register and Register(r3) onto the stack
 
-**4a:	af00**	add	r7, sp, #0
-
-	0xaf00 = 1010 	 | 	1 	| 111 | 00000000
-		 	 LOAD		SP	  Rd	Word8
-		 	 Address 
-
-	Add #Imm to the current value (#0) of the stack pointer (SP) and load the result into Register (r7)
-
-**4c:	4804**	ldr	r0, [pc, #16]	; (60 <gpio_write+0x60>)
+**23a:	4804**	ldr		r0, [pc, #16]	;(24c <main+0x14>)
 
 	0x4804 = 01001		| 000 | 00000100
 		 	PC-related	  Rd	Add unsigned offset in Imm to the current value of the PC	
 		 	Load				(#4 << 2 = #16)
 
-**4e:	2101**  movs	r1, #1
+**23c:	2101**  movs	r1, #1
 
 	0x2101 = 001	00 | 001 | 00000001
 			 		OP   Rd    Offset8
 
 	Move 8-bit immediate value (#1) into Rd (r1)
 
-**50:	f7ff fffe**	bl	1b810 <_GLOBAL__sub_I_ptr+0x1b77c>
+**23e:	f7ff ffed**	bl	21c <_ZN4mbed10DigitalOutaSEi>
 
-	0xf7ff fffe = 1111 	  | 	0 		| 111 1111 1111 1111 1111 1111 1110
+	0xf7ff ffed = 1111 	  | 	0 		| 111 1111 1111 1111 1111 1110 1101
 		      	Long Branch		Offset	  Long Branch and Link offset High
 		      	w/ Link			High
 
-**54:	4802**	ldr	r0, [pc, #8]	; (60 <gpio_write+0x60>)
+**242:	4802**	ldr		r0, [pc, #8]	;(24c <main+0x14>)
 
 	0x4802 = 01001		| 000 | 00000010
 		 	PC-related	  Rd	Add unsigned offset in Imm to the current value of the PC	
 		 	Load				(#2 << 2 = #8)
 
-**56:	2100**	_movs	r1, #0_
+**244:	2100**	movs	r1, #0
 
 	0x2100 = 001	00 | 001 | 00000000
 			 		OP   Rd    Offset8
 
 	Move 8-bit immediate value (#0) into Rd (r1)
 
-**58:	f7ff fffe**	_bl	1b810 <_GLOBAL__sub_I_ptr+0x1b77c>_
+**246:	f7ff ffe9**	bl	21c <_ZN4mbed10DigitalOutaSEi>
 
-	0xf7ff fffe = 1111 	    | 	0 		| 111 1111 1111 1111 1111 1111 1110
+	0xf7ff ffe9 = 1111 	    | 	0 		| 111 1111 1111 1111 1111 1110 1001
 		      	Long Branch		Offset	  Long Branch and Link offset High
 		      	w/ Link			High
 
-**5c:	e7f6** b.n	4c <gpio_write+0x4c>
+**24a:	e7f6** b.n	4c	23a <main+0x2>
 
 	0xe7f6 = 11100 		 | 	111 1111 0110
 		 Unconditional	   	Offset11	
@@ -77,12 +69,7 @@
 
 	Branch PC to where label is 4c
 
-**5e:	bf00**	nop
-
-	0xbf00 = 1011 1111 0000 0000
-		 	Add #0 to Stack Pointer (No Operation)
-
-**60:	00000000** .word	0x00000000
+**24c:	10000198** .word	0x10000198
 
 
 

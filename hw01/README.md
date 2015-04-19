@@ -29,7 +29,7 @@
 		 LOAD		SP	  Rd	Word8
 		 Address 
 
-	_Add #Imm to the current value (#0) of the stack pointer (SP) and load the result into Register (r7)_
+	Add #Imm to the current value (#0) of the stack pointer (SP) and load the result into Register (r7)
 
 **4c:	4804**	_r0, [pc, #16]	; (60 <gpio_write+0x60>)_
 
@@ -42,7 +42,7 @@
 	0x2101 = 001	00 | 001 | 00000001
 			OP   Rd    Offset8
 
-	_Move 8-bit immediate value (#1) into Rd (r1)_
+	Move 8-bit immediate value (#1) into Rd (r1)
 
 **50:	f7ff fffe**	_bl	1b810 <_GLOBAL__sub_I_ptr+0x1b77c>_
 
@@ -50,7 +50,7 @@
 		      Long Branch	Offset	  Long Branch and Link offset High
 		      w/ Link		High
 
-**54:	4802**	_ldr	r0, [pc, #8]	; (60 <gpio_write+0x60>)_
+**54:	4802**	_ldr	r0, [pc, #8]	; (60 <gpio_write+0x60>)
 
 	0x4802 = 01001		| 000 | 00000010
 		 PC-related	  Rd	Add unsigned offset in Imm to the current value of the PC	
@@ -61,7 +61,7 @@
 	0x2100 = 001	00 | 001 | 00000000
 			OP   Rd    Offset8
 
-	_Move 8-bit immediate value (#0) into Rd (r1)_
+	Move 8-bit immediate value (#0) into Rd (r1)
 
 **58:	f7ff fffe**	_bl	1b810 <_GLOBAL__sub_I_ptr+0x1b77c>_
 
@@ -75,7 +75,7 @@
 		 Unconditional	   Offset11	
 		 Branch		   Immediate Value
 
-	_Branch PC to where label is 4c_
+	Branch PC to where label is 4c
 
 **5e:	bf00**	_nop_
 

@@ -1,0 +1,231 @@
+
+hw01.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <__isr_vector>:
+       0:	10008000 	.word	0x10008000
+       4:	00000655 	.word	0x00000655
+       8:	00000685 	.word	0x00000685
+       c:	00000687 	.word	0x00000687
+      10:	00000689 	.word	0x00000689
+      14:	0000068b 	.word	0x0000068b
+      18:	0000068d 	.word	0x0000068d
+	...
+      2c:	0000068f 	.word	0x0000068f
+      30:	00000691 	.word	0x00000691
+      34:	00000000 	.word	0x00000000
+      38:	00000693 	.word	0x00000693
+      3c:	00000695 	.word	0x00000695
+      40:	00000697 	.word	0x00000697
+      44:	00000697 	.word	0x00000697
+      48:	00000697 	.word	0x00000697
+      4c:	00000697 	.word	0x00000697
+      50:	00000697 	.word	0x00000697
+      54:	00000697 	.word	0x00000697
+      58:	00000697 	.word	0x00000697
+      5c:	00000697 	.word	0x00000697
+      60:	00000697 	.word	0x00000697
+      64:	00000697 	.word	0x00000697
+      68:	00000697 	.word	0x00000697
+      6c:	00000697 	.word	0x00000697
+      70:	00000697 	.word	0x00000697
+      74:	00000697 	.word	0x00000697
+      78:	00000697 	.word	0x00000697
+      7c:	00000697 	.word	0x00000697
+      80:	00000697 	.word	0x00000697
+      84:	00000697 	.word	0x00000697
+      88:	00000697 	.word	0x00000697
+      8c:	00000697 	.word	0x00000697
+      90:	00000697 	.word	0x00000697
+      94:	00000697 	.word	0x00000697
+      98:	00000697 	.word	0x00000697
+      9c:	00000697 	.word	0x00000697
+      a0:	00000697 	.word	0x00000697
+      a4:	00000697 	.word	0x00000697
+      a8:	00000697 	.word	0x00000697
+      ac:	00000697 	.word	0x00000697
+      b0:	00000697 	.word	0x00000697
+      b4:	00000697 	.word	0x00000697
+      b8:	00000697 	.word	0x00000697
+      bc:	00000697 	.word	0x00000697
+      c0:	00000697 	.word	0x00000697
+      c4:	00000697 	.word	0x00000697
+      c8:	00000697 	.word	0x00000697
+
+000000cc <__do_global_dtors_aux>:
+      cc:	b510      	push	{r4, lr}
+      ce:	4c05      	ldr	r4, [pc, #20]	; (e4 <__do_global_dtors_aux+0x18>)
+      d0:	7823      	ldrb	r3, [r4, #0]
+      d2:	b933      	cbnz	r3, e2 <__do_global_dtors_aux+0x16>
+      d4:	4b04      	ldr	r3, [pc, #16]	; (e8 <__do_global_dtors_aux+0x1c>)
+      d6:	b113      	cbz	r3, de <__do_global_dtors_aux+0x12>
+      d8:	4804      	ldr	r0, [pc, #16]	; (ec <__do_global_dtors_aux+0x20>)
+      da:	f3af 8000 	nop.w
+      de:	2301      	movs	r3, #1
+      e0:	7023      	strb	r3, [r4, #0]
+      e2:	bd10      	pop	{r4, pc}
+      e4:	1000017c 	.word	0x1000017c
+      e8:	00000000 	.word	0x00000000
+      ec:	00006a74 	.word	0x00006a74
+
+000000f0 <frame_dummy>:
+      f0:	4b08      	ldr	r3, [pc, #32]	; (114 <frame_dummy+0x24>)
+      f2:	b510      	push	{r4, lr}
+      f4:	b11b      	cbz	r3, fe <frame_dummy+0xe>
+      f6:	4808      	ldr	r0, [pc, #32]	; (118 <frame_dummy+0x28>)
+      f8:	4908      	ldr	r1, [pc, #32]	; (11c <frame_dummy+0x2c>)
+      fa:	f3af 8000 	nop.w
+      fe:	4808      	ldr	r0, [pc, #32]	; (120 <frame_dummy+0x30>)
+     100:	6803      	ldr	r3, [r0, #0]
+     102:	b903      	cbnz	r3, 106 <frame_dummy+0x16>
+     104:	bd10      	pop	{r4, pc}
+     106:	4b07      	ldr	r3, [pc, #28]	; (124 <frame_dummy+0x34>)
+     108:	2b00      	cmp	r3, #0
+     10a:	d0fb      	beq.n	104 <frame_dummy+0x14>
+     10c:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+     110:	4718      	bx	r3
+     112:	bf00      	nop
+     114:	00000000 	.word	0x00000000
+     118:	00006a74 	.word	0x00006a74
+     11c:	10000180 	.word	0x10000180
+     120:	1000017c 	.word	0x1000017c
+     124:	00000000 	.word	0x00000000
+
+00000128 <_mainCRTStartup>:
+     128:	4b15      	ldr	r3, [pc, #84]	; (180 <_mainCRTStartup+0x58>)
+     12a:	2b00      	cmp	r3, #0
+     12c:	bf08      	it	eq
+     12e:	4b13      	ldreq	r3, [pc, #76]	; (17c <_mainCRTStartup+0x54>)
+     130:	469d      	mov	sp, r3
+     132:	f5a3 3a80 	sub.w	sl, r3, #65536	; 0x10000
+     136:	2100      	movs	r1, #0
+     138:	468b      	mov	fp, r1
+     13a:	460f      	mov	r7, r1
+     13c:	4813      	ldr	r0, [pc, #76]	; (18c <_mainCRTStartup+0x64>)
+     13e:	4a14      	ldr	r2, [pc, #80]	; (190 <_mainCRTStartup+0x68>)
+     140:	1a12      	subs	r2, r2, r0
+     142:	f001 fb5c 	bl	17fe <memset>
+     146:	4b0f      	ldr	r3, [pc, #60]	; (184 <_mainCRTStartup+0x5c>)
+     148:	2b00      	cmp	r3, #0
+     14a:	d000      	beq.n	14e <_mainCRTStartup+0x26>
+     14c:	4798      	blx	r3
+     14e:	4b0e      	ldr	r3, [pc, #56]	; (188 <_mainCRTStartup+0x60>)
+     150:	2b00      	cmp	r3, #0
+     152:	d000      	beq.n	156 <_mainCRTStartup+0x2e>
+     154:	4798      	blx	r3
+     156:	2000      	movs	r0, #0
+     158:	2100      	movs	r1, #0
+     15a:	0004      	movs	r4, r0
+     15c:	000d      	movs	r5, r1
+     15e:	480d      	ldr	r0, [pc, #52]	; (194 <_mainCRTStartup+0x6c>)
+     160:	2800      	cmp	r0, #0
+     162:	d002      	beq.n	16a <_mainCRTStartup+0x42>
+     164:	480c      	ldr	r0, [pc, #48]	; (198 <_mainCRTStartup+0x70>)
+     166:	f3af 8000 	nop.w
+     16a:	f001 fb01 	bl	1770 <__libc_init_array>
+     16e:	0020      	movs	r0, r4
+     170:	0029      	movs	r1, r5
+     172:	f000 fa39 	bl	5e8 <__wrap_main>
+     176:	f001 f94d 	bl	1414 <exit>
+     17a:	bf00      	nop
+     17c:	00080000 	.word	0x00080000
+     180:	10008000 	.word	0x10008000
+	...
+     18c:	1000017c 	.word	0x1000017c
+     190:	100003b8 	.word	0x100003b8
+	...
+
+0000019c <gpio_write>:
+     19c:	b082      	sub	sp, #8
+     19e:	9001      	str	r0, [sp, #4]
+     1a0:	9100      	str	r1, [sp, #0]
+     1a2:	9b00      	ldr	r3, [sp, #0]
+     1a4:	2b00      	cmp	r3, #0
+     1a6:	d005      	beq.n	1b4 <gpio_write+0x18>
+     1a8:	9b01      	ldr	r3, [sp, #4]
+     1aa:	68db      	ldr	r3, [r3, #12]
+     1ac:	9a01      	ldr	r2, [sp, #4]
+     1ae:	6852      	ldr	r2, [r2, #4]
+     1b0:	601a      	str	r2, [r3, #0]
+     1b2:	e004      	b.n	1be <gpio_write+0x22>
+     1b4:	9b01      	ldr	r3, [sp, #4]
+     1b6:	691b      	ldr	r3, [r3, #16]
+     1b8:	9a01      	ldr	r2, [sp, #4]
+     1ba:	6852      	ldr	r2, [r2, #4]
+     1bc:	601a      	str	r2, [r3, #0]
+     1be:	b002      	add	sp, #8
+     1c0:	4770      	bx	lr
+     1c2:	bf00      	nop
+
+000001c4 <_ZN4mbed10DigitalOutC1E7PinName>:
+     1c4:	b500      	push	{lr}
+     1c6:	b083      	sub	sp, #12
+     1c8:	9001      	str	r0, [sp, #4]
+     1ca:	9100      	str	r1, [sp, #0]
+     1cc:	9b01      	ldr	r3, [sp, #4]
+     1ce:	2200      	movs	r2, #0
+     1d0:	601a      	str	r2, [r3, #0]
+     1d2:	9b01      	ldr	r3, [sp, #4]
+     1d4:	2200      	movs	r2, #0
+     1d6:	605a      	str	r2, [r3, #4]
+     1d8:	9b01      	ldr	r3, [sp, #4]
+     1da:	2200      	movs	r2, #0
+     1dc:	609a      	str	r2, [r3, #8]
+     1de:	9b01      	ldr	r3, [sp, #4]
+     1e0:	2200      	movs	r2, #0
+     1e2:	60da      	str	r2, [r3, #12]
+     1e4:	9b01      	ldr	r3, [sp, #4]
+     1e6:	2200      	movs	r2, #0
+     1e8:	611a      	str	r2, [r3, #16]
+     1ea:	9b01      	ldr	r3, [sp, #4]
+     1ec:	2200      	movs	r2, #0
+     1ee:	615a      	str	r2, [r3, #20]
+     1f0:	9b01      	ldr	r3, [sp, #4]
+     1f2:	4618      	mov	r0, r3
+     1f4:	9900      	ldr	r1, [sp, #0]
+     1f6:	f000 feff 	bl	ff8 <gpio_init_out>
+     1fa:	9b01      	ldr	r3, [sp, #4]
+     1fc:	4618      	mov	r0, r3
+     1fe:	b003      	add	sp, #12
+     200:	f85d fb04 	ldr.w	pc, [sp], #4
+
+00000204 <_ZN4mbed10DigitalOut5writeEi>:
+     204:	b500      	push	{lr}
+     206:	b083      	sub	sp, #12
+     208:	9001      	str	r0, [sp, #4]
+     20a:	9100      	str	r1, [sp, #0]
+     20c:	9b01      	ldr	r3, [sp, #4]
+     20e:	4618      	mov	r0, r3
+     210:	9900      	ldr	r1, [sp, #0]
+     212:	f7ff ffc3 	bl	19c <gpio_write>
+     216:	b003      	add	sp, #12
+     218:	f85d fb04 	ldr.w	pc, [sp], #4
+
+0000021c <_ZN4mbed10DigitalOutaSEi>:
+     21c:	b500      	push	{lr}
+     21e:	b083      	sub	sp, #12
+     220:	9001      	str	r0, [sp, #4]
+     222:	9100      	str	r1, [sp, #0]
+     224:	9801      	ldr	r0, [sp, #4]
+     226:	9900      	ldr	r1, [sp, #0]
+     228:	f7ff ffec 	bl	204 <_ZN4mbed10DigitalOut5writeEi>
+     22c:	9b01      	ldr	r3, [sp, #4]
+     22e:	4618      	mov	r0, r3
+     230:	b003      	add	sp, #12
+     232:	f85d fb04 	ldr.w	pc, [sp], #4
+     236:	bf00      	nop
+
+00000238 <main>:
+     238:	b508      	push	{r3, lr}
+     23a:	4804      	ldr	r0, [pc, #16]	; (24c <main+0x14>)
+     23c:	2101      	movs	r1, #1
+     23e:	f7ff ffed 	bl	21c <_ZN4mbed10DigitalOutaSEi>
+     242:	4802      	ldr	r0, [pc, #8]	; (24c <main+0x14>)
+     244:	2100      	movs	r1, #0
+     246:	f7ff ffe9 	bl	21c <_ZN4mbed10DigitalOutaSEi>
+     24a:	e7f6      	b.n	23a <main+0x2>
+     24c:	10000198 	.word	0x10000198
+
+......

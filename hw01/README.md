@@ -12,9 +12,18 @@
 
 ## Report
 
-  - Spent around 2-3 hours to set up the environment
-  - Spent around 1-2 hours to understand the background knowledge of how to toggle the GPIO output PIN	
-  - Spent around 1-2 hours to understand the instruction set and decode the machine code
+### GCC -O Option Flag
+
+Tested with different compiler's optimization level Flag to produce object file.
+  - -O (or -O1) optimization for code size and execution time
+  - -O0 optimization for compliation time (default)
+  - -O3 optimization more for code size and execution time
+  - -Os optimization for code size
+
+### Hours spent
+  - 2-3 hours to set up the environment
+  - 1-2 hours to understand the background knowledge of how to toggle the GPIO output PIN	
+  - 1-2 hours to understand the instruction set and decode the machine code
 
 ## Machine Code from objdump_O0.txt
 

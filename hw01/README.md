@@ -23,7 +23,7 @@
 	0xb508 = 1011 | 0101 | 0000 1000
 		 	 PUSH   L  R   Push Link Register and Register(r3) onto the stack
 
-**23a:	4804**    ldr     r0, [pc, #16]	;(24c <main+0x14>)
+**23a:	4804**    ldr     r0, [pc, #16]	;(24c main+0x14)
 
 	0x4804 = 01001		| 000 | 00000100
 		 	PC-related	  Rd	Add unsigned offset in Imm to the current value of the PC	
@@ -42,7 +42,7 @@
 		      	Long Branch		Offset	  Long Branch and Link offset High
 		      	w/ Link			High
 
-**242:	4802**    ldr    r0, [pc, #8]	;(24c <main+0x14>)
+**242:	4802**    ldr    r0, [pc, #8]	;(24c main+0x14)
 
 	0x4802 = 01001		| 000 | 00000010
 		 	PC-related	  Rd	Add unsigned offset in Imm to the current value of the PC	
@@ -61,7 +61,7 @@
 		      	Long Branch		Offset	  Long Branch and Link offset High
 		      	w/ Link			High
 
-**24a:	e7f6**    b.n     23a <main+0x2>
+**24a:	e7f6**    b.n     23a main+0x2
 
 	0xe7f6 = 11100 		 | 	111 1111 0110
 		 Unconditional	   	Offset11	

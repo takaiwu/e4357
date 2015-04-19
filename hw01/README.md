@@ -31,7 +31,7 @@
 
 	Add #Imm to the current value (#0) of the stack pointer (SP) and load the result into Register (r7)
 
-**4c:	4804**	r0, [pc, #16]	; (60 <gpio_write+0x60>)
+**4c:	4804**	ldr	r0, [pc, #16]	; (60 <gpio_write+0x60>)
 
 	0x4804 = 01001		| 000 | 00000100
 		 	PC-related	  Rd	Add unsigned offset in Imm to the current value of the PC	
@@ -40,7 +40,7 @@
 **4e:	2101**  movs	r1, #1
 
 	0x2101 = 001	00 | 001 | 00000001
-			 OP   Rd    Offset8
+			 		OP   Rd    Offset8
 
 	Move 8-bit immediate value (#1) into Rd (r1)
 

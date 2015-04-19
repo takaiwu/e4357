@@ -1,4 +1,4 @@
-# HW1: ## C Code Timing Analysis Part I
+# HW1: C Code Timing Analysis Part I
 
   - http://developer.mbed.org/platforms/mbed-LPC1768/
   - skip reading: schematics and data sheets

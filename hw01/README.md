@@ -1,17 +1,29 @@
-# HW1
+# HW1: ## C Code Timing Analysis Part I
+
+  - http://developer.mbed.org/platforms/mbed-LPC1768/
+  - skip reading: schematics and data sheets
+  - write a C program to toggle a assigned GPIO output pin
+    (Please check the shared sheet)
+  - use objdump to lookup machine code
+  - use ARM data sheet to decode machine code
+  - write a page report
+    - hours that you spend
+    - solutions 
+
+## Report
 
   - Spent around 2-3 hours to set up the environment
   - Spent around 1-2 hours to understand the background knowledge of how to toggle the GPIO output PIN	
   - Spent around 1-2 hours to understand the instruction set and decode the machine code
 
-# Machine Code from dump.txt
+## Machine Code from dump.txt
 
-  48:	b580      	--> push	{r7, lr}
+**48:	b580**	_push	{r7, lr}_
 
 	   =1011 | 0101 | 1000 0000
 		PUSH   L  R   Push Link Register and Register(r7) onto the stack
 
-  4a:	af00      	--> add		r7, sp, #0
+**4a:	af00**	_add	r7, sp, #0_
 
 	   =1010 	| 	1 	| 111 | 00000000
 		LOAD		SP	  Rd	Word8

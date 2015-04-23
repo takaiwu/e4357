@@ -6,6 +6,7 @@ Q1: Is there any compile error with the following code (if any)?
 Explain:
 
 There is no compiler error. 
+3[Arr] = 7 is equivalent to Arr[3] = 7
 
 --------------------------------------------------------------------
 Q2: What is the difference between the following 3 statements? 
@@ -66,9 +67,9 @@ void swap(unsigned int * px, unsigned int *py) {
 
 	unsigned int temp;
 
-	temp = px;
-	px = py;
-	py = temp;
+	temp = *px;
+	*px = *py;
+	*py = temp;
 	
 	return;
 } 

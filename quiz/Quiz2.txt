@@ -1,6 +1,6 @@
 Q1: How many microcontrollers in the mbed LPC1768 board?
 
-Total of 8 Microcontrollers
+Total of 2 Microcontrollers
 
 --------------------------------------------------------------------
 Q2: What is the size (in GB) of the Flash Memory ("USB Dsik") of the LPC1768?

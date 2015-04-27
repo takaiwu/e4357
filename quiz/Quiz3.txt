@@ -2,7 +2,7 @@
    What is the address of FIOSET?
 
 LED1 = p1_18
-_mask value for LED1 is 0xFFFF00FF
+_mask value for LED1 is 0x00040000 (1<<18)
 The address of FIOSET is 0x2009C038
 
 --------------------------------------------------------------------

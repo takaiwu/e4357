@@ -1,0 +1,32 @@
+1. What is the _mask value for LED1? 
+   What is the address of FIOSET?
+
+LED1 = p1_18
+_mask value for LED1 is 0xFFFF00FF
+The address of FIOSET is 0x2009C038
+
+--------------------------------------------------------------------
+2. What is the RS232 Frame?
+
+RS232 frame is the bitstream of an asynchronous serial communication method, which consits of the following:
+1. start bit: space(0) 
+2. data bit: mark(1), space(0)
+3. parity bit: odd or even
+4. stop bit: 1, 1.5 or 2 bits idle time
+
+--------------------------------------------------------------------
+3. Explain the start and stop conditions of i2c?
+
+Start Condition: The chip first pull the SDA(data) line low, and next pulls the SCL (clock) line low
+Stop Condition: The bus master first releases the SCL and then the SDA line
+
+--------------------------------------------------------------------
+4. Is the i2c acknowledge SDA LOW or SDA HIGH?
+
+i2C ackowledge SDA Low
+
+--------------------------------------------------------------------
+5. Tell me about the DDR3 write leveling Concept in one sentence.  
+   (ref: slides)
+
+DDR3 write leveling is used to compensate for DQS(Data Strobe)/CK skew, which caused by the usage of fly-by topology routing on clocks, address, commands, and control signals.
